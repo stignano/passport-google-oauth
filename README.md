@@ -1,8 +1,12 @@
-# Emailer
-Uses OAuth (Google) for authentication.
-
-Run with **npm run dev**. 
+# Full Stack OAuth 
+Uses OAuth 2.0 for authentication.
 
 Users stored in MongoDB.
 
-Other strategies (Facebook, Github etc.) can be easily added. config/dev.js not commited.
+Minimal front end with routing. 
+
+Set up to automatically run in production or development environments.
+
+For local development, run with **npm run dev**.
+
+Other strategies (Facebook, Github etc.) can be easily added.
