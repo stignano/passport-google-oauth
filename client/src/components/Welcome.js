@@ -1,7 +1,30 @@
-import React from "react";
+/* Unauthenticated users will see this component */
 
-function Welcome() {
-  return <div>Hi :)</div>;
+import React, { useEffect } from "react";
+import { connect } from "react-redux";
+
+function Welcome(props) {
+  // If user is signed in, redirect them to the homepage
+  useEffect(() => {
+    if (props.user) {
+      props.history.push("/home");
+    }
+  }, [props.history, props.user]);
+
+  return (
+    <div>
+      <p>Hi, you are not signed in :(</p>
+      <a href="/auth/google">
+        <button>Sign in with Google</button>
+      </a>
+    </div>
+  );
 }
 
-export default Welcome;
+function mapStateToProps(state) {
+  return {
+    user: state.auth.user,
+  };
+}
+
+export default connect(mapStateToProps)(Welcome);

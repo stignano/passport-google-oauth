@@ -10,14 +10,20 @@ module.exports = (app) => {
   );
 
   // Get user profile (after a sign-in)
-  app.get("/auth/google/callback", passport.authenticate("google"));
+  app.get(
+    "/auth/google/callback",
+    passport.authenticate("google"),
+    (req, res) => {
+      res.redirect("/home");
+    }
+  );
 
   app.get("/api/current_user", (req, res) => {
     res.send(req.user);
   });
 
-  app.get("/api/logout", (req, res) => {
+  app.get("/api/signout", (req, res) => {
     req.logout();
-    res.send("Signed out.");
+    res.redirect("/");
   });
 };
