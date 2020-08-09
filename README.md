@@ -1,8 +1,8 @@
-# Emailer
-Uses OAuth (Google) for authentication.
+# Full Stack OAuth 
+Uses OAuth 2.0 for authentication. Users stored in MongoDB. Minimal front-end (React, Redux) with routing (React Router). 
 
-Run with **npm run dev**. 
+Set up to automatically run in production or development environments. For local development, run with **npm run dev**.
 
-Users stored in MongoDB.
+Other strategies (Facebook, Github etc.) can be easily added.
 
-Other strategies (Facebook, Github etc.) can be easily added. config/dev.js not commited.
+*Note: this is an expansion that adds front-end to my existing [oauth-server](https://github.com/tomierino/oauth-server) repo.*
