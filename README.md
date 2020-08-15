@@ -5,4 +5,3 @@ Set up to automatically run in production or development environments. For local
 
 Other strategies (Facebook, Github etc.) can be easily added.
 
-*Note: this is an expansion that adds front-end to my existing [oauth-server](https://github.com/tomierino/oauth-server) repo.*
